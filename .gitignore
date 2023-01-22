@@ -4,7 +4,7 @@
 /bin/*
 /node_modules/*
 storage/
-
+.env
 config.json
 database.json
 database.dev.json
