@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "child_process": "^1.0.2",
+    "discord.js": "^14.7.1",
+    "dotenv": "^16.0.3",
+    "spotify-web-api-js": "^1.5.2",
+    "ytdl-core": "^4.11.2"
+  }
+}
