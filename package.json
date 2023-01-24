@@ -5,6 +5,7 @@
     "discord.js-commando": "^0.12.3",
     "dotenv": "^16.0.3",
     "spotify-web-api-js": "^1.5.2",
+    "xmlhttprequest": "^1.8.0",
     "ytdl-core": "^4.11.2"
   }
 }
