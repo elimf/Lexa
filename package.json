@@ -1,4 +1,11 @@
 {
+  "name": "lexa",
+  "version": "0.0.1",
+  "description": "Lexa Bot",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
   "dependencies": {
     "child_process": "^1.0.2",
     "discord.js": "^14.7.1",
@@ -7,5 +14,17 @@
     "spotify-web-api-js": "^1.5.2",
     "xmlhttprequest": "^1.8.0",
     "ytdl-core": "^4.11.2"
-  }
+  },
+  "engines": {
+    "node": "6.10.x"
+  },
+  "repository": {
+    "url": "https://glitch.com/edit/#!/welcome-project"
+  },
+  "license": "MIT",
+  "keywords": [
+    "node",
+    "glitch",
+    "express"
+  ]
 }
