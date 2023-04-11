@@ -1,4 +1,4 @@
-require("dotenv").config();
+
 const {
   Client,
   GatewayIntentBits,
@@ -213,4 +213,4 @@ client.on("messageCreate", onMessage);
 client.on("guildMemberAdd", newMembre);
 client.on("error", console.error);
 
-client.login(config.BOT_TOKEN);
+client.login(process.env.BOT_TOKEN);
