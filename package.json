@@ -16,8 +16,8 @@
     "ytdl-core": "^4.11.2"
   },
   "engines": {
-    "node": "18.x"
-  },
+    "node": ">=18"
+  }
   "repository": {
     "url": "https://glitch.com/edit/#!/welcome-project"
   },
