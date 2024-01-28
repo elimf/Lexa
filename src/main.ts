@@ -2,6 +2,6 @@ import { NestFactory } from '@nestjs/core';
 import { DiscordBotModule } from './discord-bot.module';
 
 async function bootstrap() {
-  await NestFactory.createApplicationContext(DiscordBotModule);
+  await NestFactory.create(DiscordBotModule);
 }
 bootstrap();
