@@ -4,7 +4,6 @@ import { Module } from '@nestjs/common';
 import { GatewayIntentBits } from 'discord.js';
 import { BotGateway } from './bot.gateway';
 import { PingCommand } from './command/ping.command';
-import { ClearCommand } from './command/clear.command';
 
 @Module({
   imports: [
@@ -14,17 +13,26 @@ import { ClearCommand } from './command/clear.command';
       useFactory: (configService) => ({
         token: configService.get('DISCORD_BOT_TOKEN'),
         discordClientOptions: {
-          intents: [GatewayIntentBits.Guilds],
+          intents: [
+            GatewayIntentBits.Guilds,
+            GatewayIntentBits.GuildMessages,
+            GatewayIntentBits.MessageContent,
+            GatewayIntentBits.GuildMembers,
+            GatewayIntentBits.GuildMessageReactions,
+            GatewayIntentBits.GuildMessageTyping,
+            GatewayIntentBits.GuildVoiceStates,
+            GatewayIntentBits.GuildWebhooks,
+          ],
         },
         registerCommandOptions: [
           {
             forGuild: configService.get('DISCORD_GUILD_ID'),
-            removeCommandsBefore: true,
+            removeCommandsBefore: false,
           },
         ],
       }),
     }),
   ],
-  providers: [BotGateway, PingCommand, ClearCommand],
+  providers: [BotGateway, PingCommand],
 })
 export class DiscordBotModule {}
